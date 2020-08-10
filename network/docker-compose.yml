@@ -15,7 +15,7 @@ networks:
 services:
 
   ca.iit.certification-network.com:
-    image: hyperledger/fabric-ca:latest
+    image: hyperledger/fabric-ca:x86_64-1.0.0
     environment:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.iit.certification-network.com
@@ -32,7 +32,7 @@ services:
       - certification
 
   ca.mhrd.certification-network.com:
-    image: hyperledger/fabric-ca:latest
+    image: hyperledger/fabric-ca:x86_64-1.0.0
     environment:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.mhrd.certification-network.com
@@ -49,7 +49,7 @@ services:
       - certification
 
   ca.upgrad.certification-network.com:
-    image: hyperledger/fabric-ca:latest
+    image: hyperledger/fabric-ca:x86_64-1.0.0
     environment:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_NAME=ca.upgrad.certification-network.com
@@ -123,7 +123,7 @@ services:
 
   cli:
     container_name: cli
-    image: hyperledger/fabric-tools:latest
+    image: hyperledger/fabric-tools:x86_64-1.0.0
     tty: true
     stdin_open: true
     environment:
@@ -163,7 +163,7 @@ services:
 
   chaincode:
     container_name: chaincode
-    image: hyperledger/fabric-ccenv:latest
+    image: hyperledger/fabric-ccenv:x86_64-1.0.0
     tty: true
     environment:
       - GOPATH=/opt/gopath
